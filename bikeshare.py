@@ -7,6 +7,7 @@ CITY_DATA = {'chicago': 'chicago.csv',
               'washington': 'washington.csv'}
 
 def get_filters():
+
     """
     Asks user to specify a city, month, and day to analyze.
 
@@ -51,6 +52,7 @@ def get_filters():
     return city, month, day
 
 def load_data(city, month, day):
+
     """
     Loads data for the specified city and filters by month and day if applicable.
 
@@ -195,6 +197,7 @@ def user_stats(df):
     print('-'*40)
 
 def raw_data(df):
+
     """Asks user if they would like to see raw data."""
 
     raw_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n').lower()
@@ -210,6 +213,7 @@ def raw_data(df):
                 break
 
 def main():
+
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
