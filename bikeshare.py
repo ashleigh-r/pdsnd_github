@@ -2,11 +2,12 @@ import time
 import pandas as pd
 import numpy as np
 
-CITY_DATA = { 'chicago': 'chicago.csv',
-              'new york': 'new_york_city.csv',
-              'washington': 'washington.csv' }
+CITY_DATA = {'chicago': 'chicago.csv',
+             'new york': 'new_york_city.csv',
+             'washington': 'washington.csv'}
 
 def get_filters():
+
     """
     Asks user to specify a city, month, and day to analyze.
 
@@ -20,7 +21,8 @@ def get_filters():
     print(greeting)
 
     cities = ['chicago', 'new york', 'washington']
-    months = ['all', 'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
+    months = ['all', 'january', 'february', 'march', 'april', 'may', 'june',
+              'july', 'august', 'september', 'october', 'november', 'december']
     days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
 
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
@@ -51,6 +53,7 @@ def get_filters():
     return city, month, day
 
 def load_data(city, month, day):
+
     """
     Loads data for the specified city and filters by month and day if applicable.
 
@@ -85,7 +88,8 @@ def load_data(city, month, day):
     # filter by month if applicable
     if month != 'all':
         # use the index of the months list to get the corresponding int
-        months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
+        months = ['january', 'february', 'march', 'april', 'may', 'june',
+                  'july', 'august', 'september', 'october', 'november', 'december']
         month = months.index(month) + 1
 
         # filter by month to create the new dataframe
@@ -138,7 +142,7 @@ def station_stats(df):
     # display most frequent combination of start station and end station trip
     df['Start End'] = df['Start Station'] + ' ' 'to' ' ' + df['End Station']
     frequent_trip = df['Start End'].mode()[0]
-    print('Most Popular Route:', frequent_trip)
+    print('Most Popular Trip:', frequent_trip)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -195,6 +199,7 @@ def user_stats(df):
     print('-'*40)
 
 def raw_data(df):
+
     """Asks user if they would like to see raw data."""
 
     raw_data = input('\nWould you like to see 5 lines of raw data? Please enter yes or no.\n').lower()
@@ -210,6 +215,7 @@ def raw_data(df):
                 break
 
 def main():
+
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
