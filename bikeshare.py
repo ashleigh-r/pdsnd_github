@@ -33,15 +33,15 @@ def get_filters():
 
     # get user input for month (all, january, february, ... , june)
     while True:
-        month = input('\nPlease choose a month to continue (e.g. January or all).\n').lower()
+        month = input('\nPlease select a month to continue (e.g. January or all).\n').lower()
         if month not in months:
-            print('\nNot a valid month. Please try again.')
+            print('\nNot a valid month. Please reenter your response.')
         else:
             break
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
-        day = input('\nWhich day of the week are you interested in (e.g. Sunday or all)?\n').lower()
+        day = input('\nWhat day of the week are you interested in (e.g. Sunday or all)?\n').lower()
         if day not in days:
             print('\nNot a valid day. Please try again.')
         else:
@@ -197,7 +197,7 @@ def user_stats(df):
 def raw_data(df):
     """Asks user if they would like to see raw data."""
 
-    raw_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n').lower()
+    raw_data = input('\nWould you like to see 5 lines of raw data? Please enter yes or no.\n').lower()
     if raw_data in 'yes':
         x = 0
 
@@ -220,7 +220,7 @@ def main():
         user_stats(df)
         raw_data(df)
 
-        restart = input('\nWould you like to start over and explore more data? Enter yes or no.\n').lower()
+        restart = input('\nWould you like to start over and explore more data? Please enter yes or no.\n').lower()
         if restart.lower() != 'yes':
             break
 
