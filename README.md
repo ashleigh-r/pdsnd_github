@@ -13,5 +13,8 @@ This project aims to explore data related to bicycle-sharing systems in the US, 
 * washington.csv
 
 ### Credits
-1. Concatenate Column Values in Python using Pandas, Data to Fish, viewed 24 October 2019.
-2. Harrington, A, 1.10. Input and Output, viewed 27 October 2019.
+1. [Concatenate Column Values in Python using Pandas][1], Data to Fish, viewed 24 October 2019.
+2. Harrington, A, 1.10. [Input and Output][2], viewed 27 October 2019.
+
+[1]: http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/io.html
+[2]: https://datatofish.com/concatenate-values-python/
