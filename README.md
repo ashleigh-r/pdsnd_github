@@ -4,7 +4,7 @@
 ### Exploring US Bikeshare Data
 
 ### Description
-This project aims to explore data related to bicycle-sharing systems in the US, and calculate statistics based on user input.
+This project aims to explore data related to bicycle-sharing systems in the US, and calculate statistics based on user input. Users have the option to look at data for three major cities, including Chicago, New York, and Washington.
 
 ### Files used
 * bikeshare.py
