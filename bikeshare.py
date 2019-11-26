@@ -3,8 +3,8 @@ import pandas as pd
 import numpy as np
 
 CITY_DATA = {'chicago': 'chicago.csv',
-              'new york': 'new_york_city.csv',
-              'washington': 'washington.csv'}
+             'new york': 'new_york_city.csv',
+             'washington': 'washington.csv'}
 
 def get_filters():
 
@@ -21,7 +21,8 @@ def get_filters():
     print(greeting)
 
     cities = ['chicago', 'new york', 'washington']
-    months = ['all', 'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
+    months = ['all', 'january', 'february', 'march', 'april', 'may', 'june',
+              'july', 'august', 'september', 'october', 'november', 'december']
     days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
 
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
@@ -87,7 +88,8 @@ def load_data(city, month, day):
     # filter by month if applicable
     if month != 'all':
         # use the index of the months list to get the corresponding int
-        months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
+        months = ['january', 'february', 'march', 'april', 'may', 'june',
+                  'july', 'august', 'september', 'october', 'november', 'december']
         month = months.index(month) + 1
 
         # filter by month to create the new dataframe
